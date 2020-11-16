@@ -26,6 +26,7 @@
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{hithesisart}
 [2020/11/10 3.0.13 Harbin Institute of Technology Thesis Template]
+\RequirePackage{setspace}
 \RequirePackage{ifthen}
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{
@@ -210,8 +211,8 @@
 \RequirePackage[below]{placeins}%允许上一个section的浮动图形出现在下一个section的开始部分,还提供\FloatBarrier命令,使所有未处理的浮动图形立即被处理
 \RequirePackage{flafter}       % 使得所有浮动体不能被放置在其浮动环境之前，以免浮动体在引述它的文本之前出现.
 \RequirePackage{multirow}       %使用Multirow宏包，使得表格可以合并多个row格
-\RequirePackage{subfigure}%支持子图 %centerlast 设置最后一行是否居中
-\RequirePackage[subfigure]{ccaption} %支持双语标题
+%\RequirePackage{subfigure}%支持子图 %centerlast 设置最后一行是否居中
+%\RequirePackage[subfigure]{ccaption} %支持双语标题
 \RequirePackage{xltxtra}
 
 
@@ -249,8 +250,8 @@
 \ctexset{%
   section={
     afterindent=true,
-    beforeskip={7.5bp},%上下空0.5行
-    afterskip={7.5bp},
+    beforeskip={26.25bp},%上下空0.5行
+    afterskip={26.25bp},
     format={\heiti\xiaosan[1.25]},
     aftername=\enspace,
     fixskip=true,
@@ -258,8 +259,8 @@
   },
   subsection={
     afterindent=true,
-    beforeskip={7bp},
-    afterskip={7bp},
+    beforeskip={24.25bp},
+    afterskip={24.25bp},
     format={\heiti\sihao[1.25]},
     aftername=\enspace,
     fixskip=true,
@@ -267,8 +268,8 @@
   },
   subsubsection={
     afterindent=true,
-    beforeskip={3bp},
-    afterskip={3bp},
+    beforeskip={15bp},
+    afterskip={15bp},
     format={\heiti\normalsize},
     aftername=\enspace,
     fixskip=true,
@@ -406,6 +407,7 @@
    \else
    \hit@harbin@bachelor@schoolbottommark
    \fi
+       \input{front/instructions.tex}
 }
 
 \newcommand{\hit@report@backpage@bachelor}{
