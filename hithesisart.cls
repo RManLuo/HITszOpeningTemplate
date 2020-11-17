@@ -418,6 +418,9 @@
 
 \renewcommand\tableofcontents{%
   \thispagestyle{empty}
+  \begin{center}
+    \heiti\xiaoer\textbf{目~~~~~~录}
+  \end{center}
   \normalsize\@starttoc{toc}
 }
 
